@@ -50,25 +50,25 @@ Concatenate two MyDataFrame object along rows. Returns the concatenated MyDataFr
     - MyDataFrame slice(String[] nameArr)
     
       Returns the columns specified by a name array.
-- 4. Filtering
+- 4. **Filtering**
     - MyDataFrame filter(String col, String op, Object o)
     
       Returns data filtered by applying “col op o” on MyDataFrame object, e.g. “count > 10”, “state = ‘IL’”.
-- 5. Indexing
+- 5. **Indexing**
     - MyDataFrame loc(int index)
     
       Returns the rows starting from index.
     - MyDataFrame loc(int from, int to)
     
       Returns the rows between from and to (including from and to).
-- 6. Sorting
+- 6. **Sorting**
     - MyDataFrame sort(int index)
     
       Returns the data sorted by the column specified by index.
     - MyDataFrame sort(String name)
      
       Returns the data sorted by the column specified by name.
-- 7. Aggregation
+- 7. **Aggregation**
     - Object getMin(int index)
     
       Returns the minimum element of the column specified by index.
