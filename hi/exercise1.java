@@ -33,10 +33,9 @@ public class exercise1 extends Configured implements Tool {
 	    } else {
 	    	temp = new IntWritable(Integer.valueOf(line.substring(88,92)));
 	    }
-	  
-	    
-		year.set(yearIn);
-		output.collect(year, temp);
+
+	    year.set(yearIn);
+	    output.collect(year, temp);
 	    
 	}
 
