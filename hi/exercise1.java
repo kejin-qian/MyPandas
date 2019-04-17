@@ -10,8 +10,7 @@ import org.apache.hadoop.util.*;
 public class exercise1 extends Configured implements Tool {
 
     public static class Map extends MapReduceBase implements Mapper<LongWritable, Text, Text, IntWritable> {
-
-		private IntWritable temp;
+    	private IntWritable temp;
     	private Text year = new Text();
     	private static final List<Integer> goodQ = Arrays.asList(0,1,4,5,9);
 

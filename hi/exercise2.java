@@ -19,20 +19,22 @@ public class exercise2 extends Configured implements Tool {
 
 	protected void setup(OutputCollector<Text, FloatWritable> output) throws IOException, InterruptedException {
 	}
+
 	//key: combination; value: value in column 4
 	public void map(LongWritable key, Text value, OutputCollector<Text, FloatWritable> output, Reporter reporter) throws IOException {
-	    String line = value.toString();
-	    List<String> row = Arrays.asList(line.split(","));
+
+		String line = value.toString();
+		List<String> row = Arrays.asList(line.split(","));
 		String lastCol = row.get(row.size()-1);
 	    
 	    if (lastCol.equals("false")) {
-	    	//Extracting and formatting the combination of col30-33, adding commas to match output requirement specified in the problem statement
+	    //Extracting and formatting the combination of col30-33, adding commas to match output requirement specified in the problem statement
 	    	String combinationIn = (int)Double.parseDouble(row.get(29)) + "," + (int)Double.parseDouble(row.get(30)) + "," 
-	    			  + (int)Double.parseDouble(row.get(31)) + "," + (int)Double.parseDouble(row.get(32)) + ",";
+	    			+ (int)Double.parseDouble(row.get(31)) + "," + (int)Double.parseDouble(row.get(32)) + ",";
 	  
 		    col4 = new FloatWritable(Float.parseFloat(row.get(3)));
-			combination.set(combinationIn);
-			output.collect(combination,col4);
+		    combination.set(combinationIn);
+		    output.collect(combination,col4);
 
 	    }
 	}
