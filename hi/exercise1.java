@@ -20,7 +20,7 @@ public class exercise1 extends Configured implements Tool {
 
 	protected void setup(OutputCollector<Text, IntWritable> output) throws IOException, InterruptedException {
 	}
-    //key: year; value: temperature
+   	//key: year; value: temperature
 	public void map(LongWritable key, Text value, OutputCollector<Text, IntWritable> output, Reporter reporter) throws IOException {
 	    String line = value.toString();
 	    String yearIn = line.substring(15,19);
